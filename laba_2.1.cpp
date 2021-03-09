@@ -172,63 +172,6 @@ void DeleteUser()
 	fclose(fp);
 }
 
-//
-//void UpdateUser()
-//{
-//	FILE* fp;
-//	FILE* fs;
-//	FILE* fn;
-//
-//	fn = fopen("new.bin", "wb");
-//	fs = fopen("deletestudent.bin", "rb");
-//	fp = fopen("users.bin", "rb");
-//
-//	fseek(fp, sizeof(User), SEEK_END);
-//	long size = ftell(fp);
-//	fseek(fp, sizeof(User), SEEK_SET);
-//	int number = size / sizeof(user);
-//
-//	fs = fopen("deletestudent.bin", "rb");
-//	fseek(fs, sizeof(User), SEEK_END);
-//	long sizes = ftell(fs);
-//	fseek(fs, sizeof(User), SEEK_SET);
-//	int numbers = sizes / sizeof(user);
-//
-//	char result;
-//	user* ExistUser = new user[numbers];
-//	user* User = new user[number];
-//	while (!feof(fp))
-//	{
-//		for (int i = 0; i < number; i++)
-//		{
-//			fread(&User[i], sizeof(user), number, fp);
-//			for (int k = 0; k < numbers; k++)
-//			{
-//				fread(&ExistUser[k], sizeof(user), numbers, fs);
-//				do
-//				{
-//					fwrite(&User[i].login, sizeof(User[i].login), 1, fn);
-//					fwrite(&User[i].pin, sizeof(User[i].pin), 1, fn);
-//					fwrite(&User[i].exist, sizeof(User[i].exist), 1, fn);
-//				}
-//				while (strcmp(User[i].login, ExistUser[k].login) == 0);
-//				{
-//					if (strcmp(User[i].login, ExistUser[k].login) == 0)
-//					{
-//						cout << "Delete: " << ExistUser[k].login << endl;
-//					}
-//				}
-//			}
-//		}
-//
-//	}
-//	remove("users.bin");
-//	result = rename("name.bin", "users.bin");
-//	fclose(fn);
-//	fclose(fs);
-//	fclose(fp);
-//}
-
 //void sql(char str[])
 //{
 //	char** words = NULL, * pntr = NULL;
